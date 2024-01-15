@@ -1,25 +1,25 @@
 <script>
-    import ProjectIndex from './pages/projects/Index.vue';
-    import axios from 'axios';
+import ProjectIndex from './pages/projects/Index.vue';
+import axios from 'axios';
 
-    export default{
+export default {
 
-        components:{
-            ProjectIndex
-        },
+    components: {
+        ProjectIndex
+    },
 
-        data(){
-            return
+    data() {
+        return {
+
         }
-    } 
+    }
+} 
 </script>
 
 <template>
-  <header>
-
-  </header>
+    <header>
+        <ProjectIndex />
+    </header>
 </template>
 
-<style>
-
-</style>
+<style></style>
