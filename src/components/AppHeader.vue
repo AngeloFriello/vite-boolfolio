@@ -13,16 +13,20 @@ export default {
 </script>
 
 <template>
-    <div class="container">
-        <ul>
-            <li>
-                <router-link :to="{ name: 'home' }">Home</router-link>
-            </li>
-            <li>
-                <router-link :to="{ name: 'projects.index' }">Lista progetti</router-link>
-            </li>
-        </ul>
-    </div>
+    <header>
+        <div class="container flex">
+            <ul class="row flex">
+                <li class="btn">
+                    <router-link :to="{ name: 'home' }">Home</router-link>
+                </li>
+                <li class="btn">
+                    <router-link :to="{ name: 'projects.index' }">Lista progetti</router-link>
+                </li>
+            </ul>
+        </div>
+    </header>
 </template>
 
-<style></style>
+<style lang="scss">
+@use '..//style/general.scss'
+</style>

@@ -2,12 +2,14 @@
 import ProjectIndex from './pages/projects/Index.vue';
 import axios from 'axios';
 import AppHeader from './components/AppHeader.vue';
+import FooterApp from './components/FooterApp.vue';
 
 export default {
 
     components: {
         ProjectIndex,
         AppHeader,
+        FooterApp
     },
 
     data() {
@@ -19,13 +21,10 @@ export default {
 </script>
 
 <template>
-    <header>
-        <AppHeader/>
-
-        <router-view>
-        </router-view>
-       
-    </header>
+    <AppHeader/>
+    <router-view>
+    </router-view>
+    <FooterApp/>
 </template>
 
 <style></style>

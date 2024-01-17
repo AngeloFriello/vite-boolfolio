@@ -1,11 +1,13 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 import HomePage from './pages/HomePage.vue';
-import ProjectSHow from './pages/projects/ProjectShow.vue';
+import ProjectShow from './pages/projects/ProjectShow.vue';
 import IndexProjects from './pages/projects/Index.vue';
+import NotFound from './components/404.vue';
 
 export default {
     components: {
+        NotFound,
         ProjectShow,
         HomePage,
         IndexProjects,
@@ -31,6 +33,11 @@ const router = createRouter({
             name: 'projects.show',
             props: true,
             component: ProjectShow,
+        },
+        {
+            path: '/:pathMatch(.*)*',
+			name: 'not-found',
+			component: NotFound,
         }
 
     ]

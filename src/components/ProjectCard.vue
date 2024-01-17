@@ -11,21 +11,24 @@ export default {
     },
     data() {
         return {
-            
+
         }
-    }
+    },
+
 
 } 
 </script>
 
 <template>
     <ul>
-        <li>
-            <router-link :to="{ name: 'projects.show', params: { id: projectId } }">nome articolo</router-link>
-        </li>
+        <h3>
+            <router-link :to="{ name: 'projects.show', params: { id: project.id } }">{{ project.name }}</router-link>
+        </h3>
         <li>{{ project.admin }}</li>
-        <li>{{ project.bio }}</li>
+        <p>{{ project.bio }}</p>
     </ul>
 </template>
 
-<style lang="scss"></style>
+<style lang="scss">
+@use '..//style/general.scss'
+</style>
