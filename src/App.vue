@@ -1,11 +1,13 @@
 <script>
 import ProjectIndex from './pages/projects/Index.vue';
 import axios from 'axios';
+import AppHeader from './components/AppHeader.vue';
 
 export default {
 
     components: {
-        ProjectIndex
+        ProjectIndex,
+        AppHeader,
     },
 
     data() {
@@ -18,7 +20,11 @@ export default {
 
 <template>
     <header>
-        <ProjectIndex />
+        <AppHeader/>
+
+        <router-view>
+        </router-view>
+       
     </header>
 </template>
 

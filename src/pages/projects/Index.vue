@@ -1,10 +1,11 @@
 <script>
 import axios from 'axios';
+import Card from '../../components/ProjectCard.vue';
 
 export default {
 
     components: {
-
+        Card,
     },
 
     data() {
@@ -32,15 +33,13 @@ export default {
     <div class="container">
         <div class="grid">
             <div class="card" v-for="project in projects" :kay="project.id">
-                <ul>
-                    <li>{{ project.admin }}</li>
-                    <li>{{ project.bio }}</li>
-                </ul>
+                <Card :project="project" />
             </div>
         </div>
     </div>
+    
 </template>
 
-<style>
+<style lang="scss">
     
 </style>
